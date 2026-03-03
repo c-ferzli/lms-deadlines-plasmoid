@@ -6,7 +6,7 @@ It is built for Moodle-based LMS pages and tuned for practical student use:
 - quick session-based login
 - clean upcoming list with time remaining
 - quiz/midterm extraction from course pages and syllabus PDFs
-- one-command release packaging to GitHub
+- release packaging to GitHub
 
 ## What It Shows
 
@@ -50,24 +50,6 @@ If your LMS session expires, use **Login to LMS** in widget UI and complete logi
 - `contents/scripts/extract_quizzes.py` - quiz/midterm extraction
 - `contents/scripts/refresh_login.py` - session refresh/login
 - `contents/scripts/run_deadlines.sh` - wrapper entrypoint
-
-## Release Workflow
-
-A helper command is provided on the author machine:
-
-```bash
-releasezip "your commit message"
-```
-
-It will:
-1. build a clean `com.chris.lmsdeadlines.zip`
-2. update the tracked zip in this repo
-3. remove legacy zip name if present
-4. commit and push to `main`
-
-If no package content changed, it exits with:
-
-`No zip changes to commit.`
 
 ## Troubleshooting
 
